@@ -28,7 +28,15 @@ Abra o arquivo index.html no navegador. O site funciona diretamente, sem instala
 
 Repositório do projeto: https://github.com/lidianebrandao/ELO
 
-Os quatro arquivos do site podem ser enviados juntos para uma hospedagem de páginas estáticas, mantendo a mesma estrutura. O envio do código ao GitHub não publica o site automaticamente. Domínio e hospedagem ainda não foram configurados.
+O workflow `.github/workflows/pages.yml` publica o site no GitHub Pages a cada envio para a branch `main`. Também é possível executá-lo manualmente pela aba **Actions**. A publicação usa apenas `index.html`, `styles.css`, `script.js` e `favicon.svg`.
+
+Para habilitar a primeira publicação:
+
+1. Abra [Settings → Pages](https://github.com/lidianebrandao/ELO/settings/pages) no repositório.
+2. Em **Build and deployment → Source**, selecione **GitHub Actions**.
+3. Na aba [Actions](https://github.com/lidianebrandao/ELO/actions/workflows/pages.yml), escolha **Publicar site no GitHub Pages → Run workflow**, usando a branch `main`.
+
+Depois que a execução terminar com sucesso, o site ficará disponível em **https://lidianebrandao.github.io/ELO/**. Novos envios para `main` atualizarão esse endereço automaticamente. Não é necessário configurar um domínio próprio.
 
 O site não usa fontes externas, bibliotecas, rastreadores, cookies, formulários ou armazenamento de documentos. O contato e as orientações de contratação acontecem pelo WhatsApp. Nome pessoal, formação e vínculo profissional não são apresentados.
 
